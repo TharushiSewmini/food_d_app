@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:food_d_app/componenets/my_Button.dart';
 import 'package:food_d_app/componenets/my_textfield.dart';
@@ -101,7 +103,37 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   )
                 ],
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              GestureDetector(
+                  child: Container(
+                padding: EdgeInsets.all(16),
+                decoration: BoxDecoration(
+                    color: Theme.of(context)
+                        .colorScheme
+                        .secondary
+                        .withOpacity(0.5),
+                    borderRadius: BorderRadius.circular(8),
+                    border: Border.all(
+                        color: Theme.of(context).colorScheme.primary)),
+                child: Image.asset(
+                  "lib/assets/images/google.png",
+                  height: 30,
+                  width: 30,
+                  fit: BoxFit.cover,
+                ),
               )
+
+                  // Text(
+                  //   'Google Signin',
+                  //   textAlign: TextAlign.center,
+                  //   style: TextStyle(
+                  //       color: Theme.of(context).colorScheme.primary,
+                  //       fontWeight: FontWeight.w700),
+                  // ),
+                  )
             ]),
           ),
         ),
