@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:food_d_app/componenets/my_Button.dart';
 import 'package:food_d_app/componenets/my_textfield.dart';
 import 'package:food_d_app/pages/home_page.dart';
+import 'package:food_d_app/services/auth_service.dart';
 
 class LoginPage extends StatefulWidget {
   final void Function()? goRegister;
@@ -108,6 +109,7 @@ class _LoginPageState extends State<LoginPage> {
                 height: 20,
               ),
               GestureDetector(
+                onTap: ()=> AuthService().signInWithGoogle(),
                   child: Container(
                 padding: EdgeInsets.all(16),
                 decoration: BoxDecoration(
@@ -125,14 +127,6 @@ class _LoginPageState extends State<LoginPage> {
                   fit: BoxFit.cover,
                 ),
               )
-
-                  // Text(
-                  //   'Google Signin',
-                  //   textAlign: TextAlign.center,
-                  //   style: TextStyle(
-                  //       color: Theme.of(context).colorScheme.primary,
-                  //       fontWeight: FontWeight.w700),
-                  // ),
                   )
             ]),
           ),
